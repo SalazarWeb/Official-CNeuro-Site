@@ -129,7 +129,7 @@
 					<div class="space-y-6">
 						<!-- Address -->
 						<div class="flex gap-4">
-							<div class="flex-shrink-0">
+							<div class="shrink-0">
 								<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
 									<svg
 										class="h-5 w-5 text-blue-900"
@@ -167,7 +167,7 @@
 
 						<!-- Phone -->
 						<div class="flex gap-4">
-							<div class="flex-shrink-0">
+							<div class="shrink-0">
 								<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
 									<svg
 										class="h-5 w-5 text-blue-900"
@@ -195,7 +195,7 @@
 
 						<!-- Email -->
 						<div class="flex gap-4">
-							<div class="flex-shrink-0">
+							<div class="shrink-0">
 								<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
 									<svg
 										class="h-5 w-5 text-blue-900"
@@ -223,7 +223,7 @@
 
 						<!-- Hours -->
 						<div class="flex gap-4">
-							<div class="flex-shrink-0">
+							<div class="shrink-0">
 								<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
 									<svg
 										class="h-5 w-5 text-blue-900"

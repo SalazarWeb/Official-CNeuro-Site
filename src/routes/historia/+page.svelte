@@ -143,7 +143,7 @@
 					
 					<!-- Year badge -->
 					<div
-						class="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-blue-900 text-white shadow-lg"
+						class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-blue-900 text-white shadow-lg"
 					>
 						<span class="text-sm font-bold">{event.year}</span>
 					</div>

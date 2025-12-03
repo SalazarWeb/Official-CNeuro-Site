@@ -291,10 +291,11 @@
 									class="space-y-4"
 								>
 									<div>
-										<label class="mb-1 block text-sm font-medium text-gray-700">
+										<label for="author-input" class="mb-1 block text-sm font-medium text-gray-700">
 											{currentLang === 'es' ? 'Nombre' : 'Name'}
 										</label>
 										<input
+											id="author-input"
 											type="text"
 											bind:value={reviewForm.author}
 											class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
@@ -302,10 +303,11 @@
 										/>
 									</div>
 									<div>
-										<label class="mb-1 block text-sm font-medium text-gray-700">
+										<label for="rating-select" class="mb-1 block text-sm font-medium text-gray-700">
 											{currentLang === 'es' ? 'Calificación' : 'Rating'}
 										</label>
 										<select
+											id="rating-select"
 											bind:value={reviewForm.rating}
 											class="rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
 										>
@@ -315,10 +317,11 @@
 										</select>
 									</div>
 									<div>
-										<label class="mb-1 block text-sm font-medium text-gray-700">
+										<label for="comment-textarea" class="mb-1 block text-sm font-medium text-gray-700">
 											{currentLang === 'es' ? 'Comentario' : 'Comment'}
 										</label>
 										<textarea
+											id="comment-textarea"
 											bind:value={reviewForm.comment}
 											rows="4"
 											class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200"
