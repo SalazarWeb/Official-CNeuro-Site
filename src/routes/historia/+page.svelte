@@ -59,9 +59,58 @@
 		</h1>
 		<p class="mt-4 max-w-3xl text-lg text-blue-100">
 			{currentLang === 'es'
-				? 'Más de tres décadas dedicadas a la investigación científica de excelencia en neurociencias.'
+				? 'Más de tres décadas dedicadas a la investigación científica de excelencia.'
 				: 'Over three decades dedicated to scientific research excellence in neurosciences.'}
 		</p>
+	</div>
+</section>
+
+<!-- About Introduction -->
+<section class="bg-gray-50 py-16">
+	<div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+		<div class="rounded-lg bg-white p-8 shadow-sm md:p-12">
+			{#if currentLang === 'es'}
+				<p class="mb-6 text-lg leading-relaxed text-gray-700">
+					Cómo surgen la inteligencia y el comportamiento a partir de interacciones complejas e
+					intrincadas dentro del cerebro sigue siendo un misterio profundo y sin resolver,
+					fundamental para una apasionante área de investigación interdisciplinaria. La última
+					década ha presenciado un rápido progreso en herramientas experimentales que ahora permiten
+					monitorizar y manipular los circuitos cerebrales con un detalle sin precedentes. Esta
+					evolución presenta desafíos y oportunidades tanto para los experimentalistas como para los
+					teóricos, ya que la compleja algoritmia de la función cerebral y las intrincadas
+					interacciones entre neuronas no pueden abordarse únicamente mediante experimentos. La
+					teoría matemática es fundamental para el surgimiento de perspectivas y marcos teóricos que
+					pueden ayudar a guiar el trabajo experimental e identificar los principios unificadores de
+					la función cerebral.
+				</p>
+				<p class="text-lg leading-relaxed text-gray-700">
+					Con el objetivo de poner el conocimiento de vanguardia al alcance de estudiantes e
+					investigadores interesados ​​de todo el mundo, los organizadores decidieron crear CNeuro
+					en 2018. Cada año, elaboran un programa de verano del más alto nivel, invitando a un
+					selecto grupo de brillantes científicos líderes en su campo. El profesorado seleccionado
+					comparte su experiencia y los últimos avances de investigación con los participantes.
+				</p>
+			{:else}
+				<p class="mb-6 text-lg leading-relaxed text-gray-700">
+					How intelligence and behavior arise from complex and intricate interactions within the
+					brain remains a profound and unresolved mystery, fundamental to an exciting area of
+					interdisciplinary research. The last decade has witnessed rapid progress in experimental
+					tools that now allow monitoring and manipulating brain circuits with unprecedented detail.
+					This evolution presents challenges and opportunities for both experimentalists and
+					theorists, as the complex algorithms of brain function and intricate interactions between
+					neurons cannot be addressed solely through experiments. Mathematical theory is fundamental
+					to the emergence of insights and theoretical frameworks that can help guide experimental
+					work and identify the unifying principles of brain function.
+				</p>
+				<p class="text-lg leading-relaxed text-gray-700">
+					With the goal of making cutting-edge knowledge accessible to interested students and
+					researchers from around the world, the organizers decided to create CNeuro in 2018. Each
+					year, they develop a summer program of the highest level, inviting a select group of
+					brilliant scientists who are leaders in their field. The selected faculty share their
+					expertise and the latest research advances with participants.
+				</p>
+			{/if}
+		</div>
 	</div>
 </section>
 
@@ -90,7 +139,7 @@
 				</h2>
 				<p class="text-gray-600">
 					{currentLang === 'es'
-						? 'Realizar investigaciones científicas de excelencia en el campo de las neurociencias, contribuyendo al conocimiento fundamental del sistema nervioso y al desarrollo de soluciones innovadoras para problemas de salud relacionados con el cerebro y el sistema nervioso.'
+						? 'Realizar investigaciones científicas de excelencia, contribuyendo al conocimiento fundamental del sistema nervioso y al desarrollo de soluciones innovadoras para problemas de salud relacionados con el cerebro y el sistema nervioso.'
 						: 'To conduct scientific research of excellence in the field of neurosciences, contributing to fundamental knowledge of the nervous system and developing innovative solutions for brain and nervous system health problems.'}
 				</p>
 			</div>

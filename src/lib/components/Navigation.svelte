@@ -37,10 +37,8 @@
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="flex h-20 items-center justify-between">
 			<!-- Logo -->
-			<div class="flex items-center gap-3">
-				<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-900">
-					<span class="text-2xl font-bold text-white">CN</span>
-				</div>
+			<a href="/" class="flex items-center gap-3">
+				<img src="/CNeuro.png" alt="CNeuro Logo" class="h-32 w-32 object-contain" />
 				<div class="flex flex-col">
 					<span class="text-lg font-bold text-blue-900">CNEURO</span>
 					<span class="text-xs text-gray-600"
@@ -49,7 +47,7 @@
 							: 'Neuroscience Center'}</span
 					>
 				</div>
-			</div>
+			</a>
 
 			<!-- Navigation Links -->
 			<div class="hidden items-center gap-1 md:flex">

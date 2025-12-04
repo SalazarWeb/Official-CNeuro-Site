@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { language } from '$lib/stores/language';
+	import { getTranslation } from '$lib/i18n';
 
 	let currentLang = $state($language);
+	let t = $derived(getTranslation(currentLang));
 
 	$effect(() => {
 		currentLang = $language;
@@ -16,33 +18,22 @@
 
 	function submitForm(e: Event) {
 		e.preventDefault();
-		
+
 		// In a real app, this would make an API call
-		alert(
-			currentLang === 'es'
-				? 'Gracias por contactarnos. Le responderemos pronto.'
-				: 'Thank you for contacting us. We will respond soon.'
-		);
+		alert(t.contact.form.success);
 
 		// Reset form
 		contactForm = { name: '', email: '', subject: '', message: '' };
 	}
 </script>
-
-<svelte:head>
-	<title>CNEURO - {currentLang === 'es' ? 'Contacto' : 'Contact'}</title>
-</svelte:head>
-
 <!-- Header -->
 <section class="bg-blue-900 py-16 text-white">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<h1 class="text-4xl font-bold md:text-5xl">
-			{currentLang === 'es' ? 'Contacto y Ubicación' : 'Contact and Location'}
+			{t.contact.title}
 		</h1>
 		<p class="mt-4 max-w-3xl text-lg text-blue-100">
-			{currentLang === 'es'
-				? 'Estamos aquí para responder sus consultas y establecer colaboraciones.'
-				: 'We are here to answer your questions and establish collaborations.'}
+			{t.contact.subtitle}
 		</p>
 	</div>
 </section>
@@ -53,13 +44,13 @@
 			<!-- Contact Form -->
 			<div class="rounded-lg bg-white p-8 shadow-sm">
 				<h2 class="mb-6 text-2xl font-bold text-gray-900">
-					{currentLang === 'es' ? 'Envíenos un mensaje' : 'Send us a message'}
+					{t.contact.form.title}
 				</h2>
-				
+
 				<form onsubmit={submitForm} class="space-y-6">
 					<div>
 						<label for="name" class="mb-2 block text-sm font-medium text-gray-700">
-							{currentLang === 'es' ? 'Nombre completo' : 'Full name'}
+							{t.contact.form.name}
 						</label>
 						<input
 							type="text"
@@ -72,7 +63,7 @@
 
 					<div>
 						<label for="email" class="mb-2 block text-sm font-medium text-gray-700">
-							{currentLang === 'es' ? 'Correo electrónico' : 'Email'}
+							{t.contact.form.email}
 						</label>
 						<input
 							type="email"
@@ -85,7 +76,7 @@
 
 					<div>
 						<label for="subject" class="mb-2 block text-sm font-medium text-gray-700">
-							{currentLang === 'es' ? 'Asunto' : 'Subject'}
+							{t.contact.form.subject}
 						</label>
 						<input
 							type="text"
@@ -98,7 +89,7 @@
 
 					<div>
 						<label for="message" class="mb-2 block text-sm font-medium text-gray-700">
-							{currentLang === 'es' ? 'Mensaje' : 'Message'}
+							{t.contact.form.message}
 						</label>
 						<textarea
 							id="message"
@@ -113,7 +104,7 @@
 						type="submit"
 						class="w-full rounded-lg bg-blue-900 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-800"
 					>
-						{currentLang === 'es' ? 'Enviar mensaje' : 'Send message'}
+						{t.contact.form.send}
 					</button>
 				</form>
 			</div>
@@ -123,14 +114,16 @@
 				<!-- Contact Information -->
 				<div class="rounded-lg bg-white p-8 shadow-sm">
 					<h2 class="mb-6 text-2xl font-bold text-gray-900">
-						{currentLang === 'es' ? 'Información de contacto' : 'Contact information'}
+						{t.contact.info.title}
 					</h2>
 
 					<div class="space-y-6">
 						<!-- Address -->
 						<div class="flex gap-4">
 							<div class="shrink-0">
-								<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
+								<div
+									class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100"
+								>
 									<svg
 										class="h-5 w-5 text-blue-900"
 										fill="none"
@@ -154,7 +147,7 @@
 							</div>
 							<div>
 								<h3 class="mb-1 font-medium text-gray-900">
-									{currentLang === 'es' ? 'Dirección' : 'Address'}
+									{t.contact.info.address}
 								</h3>
 								<p class="text-gray-600">
 									Avenida 25 #15202 e/ 158 y 190<br />
@@ -168,7 +161,9 @@
 						<!-- Phone -->
 						<div class="flex gap-4">
 							<div class="shrink-0">
-								<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
+								<div
+									class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100"
+								>
 									<svg
 										class="h-5 w-5 text-blue-900"
 										fill="none"
@@ -186,7 +181,7 @@
 							</div>
 							<div>
 								<h3 class="mb-1 font-medium text-gray-900">
-									{currentLang === 'es' ? 'Teléfono' : 'Phone'}
+									{t.contact.info.phone}
 								</h3>
 								<p class="text-gray-600">+53 7 271 6247</p>
 								<p class="text-gray-600">+53 7 271 5353</p>
@@ -196,7 +191,9 @@
 						<!-- Email -->
 						<div class="flex gap-4">
 							<div class="shrink-0">
-								<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
+								<div
+									class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100"
+								>
 									<svg
 										class="h-5 w-5 text-blue-900"
 										fill="none"
@@ -214,7 +211,7 @@
 							</div>
 							<div>
 								<h3 class="mb-1 font-medium text-gray-900">
-									{currentLang === 'es' ? 'Correo electrónico' : 'Email'}
+									{t.contact.info.email}
 								</h3>
 								<p class="text-gray-600">contacto@cneuro.cu</p>
 								<p class="text-gray-600">info@cneuro.cu</p>
@@ -224,7 +221,9 @@
 						<!-- Hours -->
 						<div class="flex gap-4">
 							<div class="shrink-0">
-								<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100">
+								<div
+									class="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100"
+								>
 									<svg
 										class="h-5 w-5 text-blue-900"
 										fill="none"
@@ -242,37 +241,33 @@
 							</div>
 							<div>
 								<h3 class="mb-1 font-medium text-gray-900">
-									{currentLang === 'es' ? 'Horario de atención' : 'Business hours'}
+									{t.contact.info.hours}
 								</h3>
 								<p class="text-gray-600">
-									{currentLang === 'es' ? 'Lunes a Viernes' : 'Monday to Friday'}: 8:00 AM -
-									5:00 PM
-								</p>
-								<p class="text-gray-600">
-									{currentLang === 'es' ? 'Sábados' : 'Saturday'}: 8:00 AM - 12:00 PM
+									{t.contact.info.weekdays}: 8:00 AM - 5:00 PM
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- Map Placeholder -->
+				<!-- Map -->
 				<div class="overflow-hidden rounded-lg bg-white shadow-sm">
 					<div class="aspect-video bg-gray-200">
 						<iframe
-							src="https://www.openstreetmap.org/export/embed.html?bbox=-82.43698120117189%2C23.104992459639936%2C-82.41424560546876%2C23.116763661045426&layer=mapnik&marker=23.110878%2C-82.425613"
-							class="h-full w-full border-0"
+							src="https://www.openstreetmap.org/export/embed.html?bbox=-82.45660096406938%2C23.07473986547188%2C-82.45454639196397%2C23.076047696237346&amp;layer=mapnik&amp;marker=23.07539378244437%2C-82.45557367801666"
+							class="h-full w-full border-0 pointer-events-none"
 							title={currentLang === 'es' ? 'Mapa de ubicación' : 'Location map'}
 						></iframe>
 					</div>
 					<div class="p-4">
 						<a
-							href="https://www.openstreetmap.org/?mlat=23.1109&mlon=-82.4256#map=16/23.1109/-82.4256"
+							href="https://www.openstreetmap.org/?mlat=23.075394&amp;mlon=-82.455574#map=19/23.075394/-82.455574"
 							target="_blank"
 							rel="noopener noreferrer"
 							class="text-sm text-blue-900 hover:underline"
 						>
-							{currentLang === 'es' ? 'Ver mapa más grande' : 'View larger map'}
+							{t.contact.info.mapLink}
 						</a>
 					</div>
 				</div>

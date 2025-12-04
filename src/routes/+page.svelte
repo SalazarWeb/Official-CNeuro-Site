@@ -15,9 +15,12 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="bg-gradient-to-br from-blue-50 to-white py-20">
+<section class="bg-linear-to-br from-blue-50 to-white py-20">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="text-center">
+			<div class="mb-8 flex justify-center">
+				<img src="/CNeuro.png" alt="CNeuro Logo" class="h-32 w-32 object-contain md:h-40 md:w-40" />
+			</div>
 			<h1 class="mb-6 text-4xl font-bold tracking-tight text-blue-900 sm:text-5xl lg:text-6xl">
 				{t.home.hero.title}
 			</h1>
@@ -53,7 +56,7 @@
 				</div>
 			</div>
 			<div class="text-center">
-				<div class="text-4xl font-bold text-blue-900">500+</div>
+				<div class="text-4xl font-bold text-blue-900">100+</div>
 				<div class="mt-2 text-sm text-gray-600">
 					{t.home.stats.publications}
 				</div>
