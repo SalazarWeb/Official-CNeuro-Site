@@ -49,30 +49,30 @@
 <section class="border-y border-gray-200 bg-white py-12">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="grid grid-cols-2 gap-8 md:grid-cols-4">
-			<div class="text-center">
+			<a href="/historia" class="text-center transition-opacity hover:opacity-80">
 				<div class="text-4xl font-bold text-blue-900">30+</div>
 				<div class="mt-2 text-sm text-gray-600">
 					{t.home.stats.years}
 				</div>
-			</div>
-			<div class="text-center">
+			</a>
+			<a href="/publicaciones" class="text-center transition-opacity hover:opacity-80">
 				<div class="text-4xl font-bold text-blue-900">100+</div>
 				<div class="mt-2 text-sm text-gray-600">
 					{t.home.stats.publications}
 				</div>
-			</div>
+			</a>
 			<div class="text-center">
 				<div class="text-4xl font-bold text-blue-900">50+</div>
 				<div class="mt-2 text-sm text-gray-600">
 					{t.home.stats.researchers}
 				</div>
 			</div>
-			<div class="text-center">
+			<a href="/noticias" class="text-center transition-opacity hover:opacity-80">
 				<div class="text-4xl font-bold text-blue-900">15+</div>
 				<div class="mt-2 text-sm text-gray-600">
 					{t.home.stats.projects}
 				</div>
-			</div>
+			</a>
 		</div>
 	</div>
 </section>

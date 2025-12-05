@@ -53,7 +53,7 @@
 				</h3>
 				<div class="flex gap-4">
 					<a
-						href="#"
+						href="/home"
 						class="text-gray-500 transition-colors hover:text-blue-900"
 						aria-label="Twitter"
 					>
@@ -64,7 +64,7 @@
 						</svg>
 					</a>
 					<a
-						href="#"
+						href="/home"
 						class="text-gray-500 transition-colors hover:text-blue-900"
 						aria-label="LinkedIn"
 					>

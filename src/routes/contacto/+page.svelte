@@ -260,7 +260,7 @@
 							title={currentLang === 'es' ? 'Mapa de ubicación' : 'Location map'}
 						></iframe>
 					</div>
-					<div class="p-4">
+					<!-- <div class="p-4">
 						<a
 							href="https://www.openstreetmap.org/?mlat=23.075394&amp;mlon=-82.455574#map=19/23.075394/-82.455574"
 							target="_blank"
@@ -269,7 +269,7 @@
 						>
 							{t.contact.info.mapLink}
 						</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
